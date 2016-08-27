@@ -34,6 +34,7 @@ class Contacts extends React.Component {
             return (<ContactInfo name={contact.name} phone={contact.phone} key={i}/>);
           })}
         </ul>
+        <ContactCreator/>
       </div>
     );
   }
@@ -43,6 +44,28 @@ class ContactInfo extends React.Component {
   render(){
     return(
       <li>{this.props.name} {this.props.phone}</li>
+    );
+  }
+}
+
+class ContactCreator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      phone: ""
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>
+          <input type="text" name="name" placeholder="name" value={this.state.name}/>
+          <input type="text" phone="phone" placeholder="phone" value={this.state.phone}/>
+          <button>Insert</button>
+        </p>
+      </div>
     );
   }
 }
