@@ -1,19 +1,20 @@
-module.exports = {
-  entry: './src/index.js',
+var path = require('path');
+var webpack = require('webpack');
 
+module.exports = {
+  entry: ['./src/index'],
   output: {
-    path: __dirname + '/public/',
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-
   devServer: {
     inline: true,
     port: 7777,
-    contentBase: __dirname + '/public'
+    contentBase: __dirname + '/src/'
   },
-
   module: {
     loaders: [
+      { test: /\.sass$/, loader: 'style!css!sass' },
       {
         test: /\.js$/,
         loader: 'babel',
@@ -24,5 +25,12 @@ module.exports = {
         }
       }
     ]
-  }
-};
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ]
+}
