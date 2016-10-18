@@ -16,7 +16,6 @@ var App = React.createClass({
       alert("검색 단어가 없습니다.")
     }
     $.getJSON("http://apis.daum.net/search/book?callback=?", {
-        /** daum에서 요구하는 파라미터 셋팅 */
         "q" : query,
         "result" : 10,
         "pageno" : 1,

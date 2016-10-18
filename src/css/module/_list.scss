@@ -3,20 +3,20 @@
     border-bottom: 1px dotted #ccc;
 
     a {
+      position: relative;
       display: block;
-      padding: 5px;
       width: auto;
+      padding: 5px;
       color: #222;
       text-decoration: none;
-      position: relative;
 
       .thumb {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        display: block;
         width: 80px;
         height: 105px;
-        display: block;
-        position: absolute;
-        left: 10px;
-        top: 5px;
 
         img {
           width: 80px;
@@ -27,10 +27,10 @@
       .text {
         display: block;
         width: auto;
+        height: 80px;
         padding-top: 5px;
         padding-left: 100px;
         padding-right: 10px;
-        height: 80px;
 
         span {
           white-space: nowrap;
