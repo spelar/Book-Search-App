@@ -23,6 +23,10 @@ var App = React.createClass({
         "output" : "json",
         "apikey" : '341cb95a4fb90b0f20e2a46fa076089a'
     }).then(function(data){
+      var item = data.channel.item;
+      for (var i = 0; i < item.length; i++) {
+        item[i].title = item[i].title.replace(/\&lt;/g, "<").replace(/\&gt;/g, ">").replace(/(<([^>]+)>)/g,"");
+      }
       this.setState({
         searchQuery : query,
         bookResults : (data && data.channel.item) || []
