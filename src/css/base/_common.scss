@@ -1,0 +1,34 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+  padding-bottom: 20px;
+}
+
+.main-title {
+	width: auto;
+	padding: 10px;
+	color: #fff;
+	background-color: #3a88d1;
+	border-left: 10px solid #3a88d1;
+	border-bottom: 1px solid #3a88d1;
+	font-size: 20px;
+}
+
+.exec, .console {
+	padding: 20px 15px;
+	border-bottom: 1px solid #3a88d1;
+}
+
+.console {
+	font-family: 'Courier New';
+	font-size: 12px;
+	font-style: italic;
+	line-height: 130%;
+}
+
+.example {
+	padding: 10px 30px;
+}

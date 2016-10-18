@@ -1,0 +1,59 @@
+.list {
+  li {
+    border-bottom: 1px dotted #ccc;
+
+    a {
+      display: block;
+      padding: 5px;
+      width: auto;
+      color: #222;
+      text-decoration: none;
+      position: relative;
+
+      .thumb {
+        width: 80px;
+        height: 105px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 5px;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      .text {
+        display: block;
+        width: auto;
+        padding-top: 5px;
+        padding-left: 100px;
+        padding-right: 10px;
+        height: 80px;
+
+        span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .title {
+          font-size: 1.1em;
+          font-weight: bold;
+          line-height: 150%;
+        }
+
+        .desc {
+          font-size: 1em;
+          line-height: 150%;
+        }
+
+        .info {
+          font-size: 0.8em;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
