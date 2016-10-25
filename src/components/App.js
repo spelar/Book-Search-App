@@ -9,7 +9,7 @@ var App = React.createClass({
       searchQuery : ''
     };
   },
-  onSubmitSubwaySearch: function(event) {
+  onSubmitBookSearch: function(event) {
     event.preventDefault();
     var query = event.target.keyword.value;
     if(!query) {
@@ -33,7 +33,7 @@ var App = React.createClass({
       });
     }.bind(this));
   },
-  renderSubwaySearchResult: function(results) {
+  renderBookSearchResult: function(results) {
     var isResult = results.length > 0;
     var resultList;
 
@@ -66,7 +66,7 @@ var App = React.createClass({
       <div>
         <h1 className="main-title">Daum 이미지 검색</h1>
     		<div className="exec">
-    			<form name="form1" action="/" onSubmit={this.onSubmitSubwaySearch}>
+    			<form name="form1" action="/" onSubmit={this.onSubmitBookSearch}>
     				<fieldset>
     					<legend>검색어 입력</legend>
     					<input type="text" name="keyword"/>
@@ -74,7 +74,7 @@ var App = React.createClass({
     				</fieldset>
     			</form>
     		</div>
-        {this.state.searchQuery ? this.renderSubwaySearchResult(this.state.bookResults) : ''}
+        {this.state.searchQuery ? this.renderBookSearchResult(this.state.bookResults) : ''}
       </div>
     );
   }
